@@ -1,0 +1,240 @@
+/* ==== FONT ==========  */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+/* ==== RESET CSS ========== */
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+/* ==== COLORS ========== */
+html{
+  /* ==== LIGHT THEME ==== */
+  /* BG */
+  --l-bg: #e6e6e6;
+  --l-bvisor: #eeeeee;
+  --l-bkeys: #d5cccd;
+  
+  /* KEYS BG*/
+  --l-key: #e5e4e0;
+  --l-keyS: #a59c93;
+  --l-dr: #388187;
+  --l-drS: #1c6168;
+  --l-e: #c85401;
+  --l-eS: #893a02;
+  
+  /* TEXT */
+  --l-title:#36362a;
+  --l-w: #ffffff;
+  --l-keyt: #36362a;
+  
+  /* SWAP ICON */
+  --l-container: #d5cccd;
+  --l-circle: #ffffff;
+  
+  /* SCROLL */
+  scroll-behavior: smooth;
+  
+  /* FONT-SIZE DEFAULT */
+  font-size: 62.5%;
+}
+.dark-theme{
+  /* ==== DARK THEME ====*/
+  /* BG */
+  --l-bg: #3b4664;
+  --l-bvisor: #181f32;
+  --l-bkeys: #252d44;
+
+  /* KEYS BG*/
+  --l-key: #eae3db;
+  --l-keyS: #b2a499;
+  --l-dr: #647299;
+  --l-drS: #414d71;
+  --l-e: #d13f30;
+  --l-eS: #912316;
+  
+  /* TEXT */
+  --l-title:#ffffff;
+  --l-w: #ffffff;
+  --l-keyt: #3d3f4b;
+
+  /* SWAP ICON */
+  --l-container: #252d44;
+  --l-circle: #ffffff;
+}
+
+/* ==== DEFAULT ========== */
+body{
+  width: 100%;
+  height: 100vh;
+  
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  
+  background: var(--l-bg);
+  transition: background .3s linear;
+}
+.site-wrapper{
+  width: 100%;
+  height: 100vh;
+  padding: 10rem 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ==== CALCULATOR WRAPPER ========== */
+
+/* ==== TOP SIDE ========== */
+.container-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  color: var(--l-title);
+}
+.title{
+  font-size: 3.2rem;
+}
+.theme-title{
+  padding-right: 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* ==== SWAP THEME ========== */
+.swap-themes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+  width: 5rem;
+  height: 2.5rem;
+  
+  border-radius: 2rem;
+  background-color: var(--l-container);
+}
+.circle{
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  margin-left: .4rem;
+
+  border-radius: 1rem;
+  background-color: var(--l-circle);
+
+  transition: transform .2s linear;
+}
+.checkbox{
+  /* sr-only */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.checkbox:checked + .label{
+  background-color: var(--l-container);
+}
+.checkbox:checked + .label .circle{
+  background-color: var(--l-circle);
+  transform: translateX(2.2rem);
+}
+
+/* ==== VISOR ========== */
+.container-visor{
+  width: 100%;
+  height: auto;
+}
+.visor #visor{
+  width: 100%;
+  height: 12rem;
+  padding: 3.5rem;
+
+  text-align: right;
+  font-size: 5rem;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+
+  background: var(--l-bvisor);
+  color: var(--l-w);
+  border-radius: 1rem;
+}
+
+/* ==== KEYS ========== */
+.grid{
+  padding: 3.5rem;
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 2.5rem;
+}
+.container-keys{
+  width: 100%;
+  margin-top: 2rem;
+  
+  border-radius: 1rem;
+  background: var(--l-bkeys);
+}
+.key{
+  cursor: pointer;
+  width: 10rem;
+  height: 6rem;
+
+  border-radius: 1rem;
+  font-family: "Spartan", sans-serif;
+  font-size: 3.2rem;
+  
+  box-shadow: inset 0  -.3rem 0 var(--l-keyS);
+  background: var(--l-key);
+  color: var(--l-keyt);
+}
+.key:active{
+  box-shadow: none;
+  border-top: .2rem solid var(--l-bkeys);
+}
+.d{
+  font-size: 2rem;
+  background: var(--l-dr);
+  color: var(--l-w);
+  text-transform: uppercase;
+
+  box-shadow:inset 0  -.3rem 0 var(--l-drS);
+}
+.r{
+  width: 100%;
+  grid-column: 1 / span 2;
+
+  font-size: 2rem;
+  color: var(--l-w);
+  background-color: var(--l-dr);
+  text-transform: uppercase;
+
+  box-shadow: inset 0  -.3rem 0 var(--l-drS);
+}
+.e{
+  width: 100%;
+  grid-column: 3 / span 2;
+
+  font-size: 2rem;
+  background: var(--l-e);
+  color: var(--l-w);
+
+  box-shadow: inset 0  -.3rem 0 var(--l-eS);
+}
+
+/* ==== MEDIA QUERIES ========== */
