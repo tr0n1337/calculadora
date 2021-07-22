@@ -159,21 +159,23 @@ body{
   width: 100%;
   height: auto;
 }
-.visor #visor{
+#visor{
   width: 100%;
   height: 12rem;
+  
+  width: 100%;
+  height: 100%;
   padding: 3.5rem;
-
-  text-align: right;
+  
   font-size: 5rem;
   font-family: "Spartan", sans-serif;
   font-weight: 700;
-
-  background: var(--l-bvisor);
-  color: var(--l-w);
+  text-align: right;
+  
+  color: var(--l-title);
   border-radius: 1rem;
+  background: var(--l-bvisor);
 }
-
 /* ==== KEYS ========== */
 .grid{
   padding: 3.5rem;

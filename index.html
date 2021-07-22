@@ -6,19 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
   <!-- SITE WRAPPER -->
-  <div class="site-wrapper">
+  <div class="calculator-wrapper">
 
-    <!-- CALC WRAPPER -->
-
-      <div class="calculator-wrapper">
-        
         <!-- TOP SIDE -->
         <div class="container-top">
           <div class="title">
@@ -37,13 +33,11 @@
         
         <!-- VISOR -->
         <div class="container-visor">
-          <div class="visor">
-            <div type="number" id="visor"></div>
-          </div>
+            <input type="number" id="visor" readonly>
         </div>
         
         <!-- KEYS -->
-        <div class="container-keys grid">
+        <div class="container-keys-grid">
           <button class="key">7</button>
           <button class="key">8</button>
           <button class="key">9</button>
@@ -59,14 +53,14 @@
           <button class="key">&period;</button>
           <button class="key">0</button>
           <button class="key">&sol;</button>
-          <button class="key x">x</button>
+          <button class="key">x</button>
           <button class="key r" >reset</button>
           <button class="key e">&equals;</button>
         </div>
         
-      </div>
-
     </div>
+
+    <div class="display-turnOn sr-only"><p>Resolução Insuficiente</p></div>
     
     <!-- SCRIPT -->
     <script src="js/main.js"></script>
