@@ -55,5 +55,5 @@ Esse projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/
 
 ## 📱 Contato
 
-- Website [( in construction )](https://google.com.br)
+- Website [portfolio](https://thiagoportfolio.vercel.app/)
 - GitHub [tr0n1337](https://github.com/tr0n1337/)
